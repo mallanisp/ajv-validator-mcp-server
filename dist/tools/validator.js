@@ -22,7 +22,7 @@ export class AjvValidatorTool extends Tool {
         addFormats.default(this.ajv);
         this.ajv.addKeyword({
             keyword: "x-ls",
-            validate: (schema, data) => {
+            validate: (schema, _data) => {
                 for (const prop in Object.keys(schema)) {
                     if (!(prop in ["rdfPredicate", "rdfIRI"])) {
                         return false;

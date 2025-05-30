@@ -3,7 +3,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { AjvValidatorParams, AjvValidatorTool } from "./tools/validator.js";
 
-export const SERVER_NAME = "ajv-validator";
+export const SERVER_NAME = "ajv-validator-mcp-server";
 export const SERVER_VERSION = "1.0.0";
 
 function init() {
@@ -31,7 +31,6 @@ async function main() {
   const server = init();
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("Weather MCP Server running on stdio");
 }
 
 main().catch((error) => {

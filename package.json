@@ -1,7 +1,7 @@
 {
   "name": "ajv-validation-mcp",
-  "version": "0.0.1",
-  "description": "ajv-validation-mcp MCP server",
+  "version": "1.0.0",
+  "description": "This project provides a minimal [Model Context Protocol (MCP)](https://modelcontextprotocol.io/quickstart/server#node) server for validating JSON data against JSON Schema using [AJV](https://ajv.js.org/).",
   "type": "module",
   "bin": {
     "ajv-validation-mcp": "./dist/index.js"
@@ -13,7 +13,8 @@
     "start": "node dist/index.js",
     "build": "tsc && chmod 755 dist/index.js",
     "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
@@ -23,7 +24,10 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0"
   },
   "engines": {
     "node": ">=18.19.0"

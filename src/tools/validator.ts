@@ -1,8 +1,8 @@
+import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import Ajv, { ErrorObject } from "ajv";
 import addFormats from "ajv-formats";
 import { z } from "zod";
 import { Tool } from "./tool.js";
-import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 
 export interface AjvValidatorParams {
   schema: Record<string, unknown>;
@@ -40,7 +40,7 @@ export class AjvValidatorTool extends Tool<AjvValidatorParams> {
 
     this.ajv.addKeyword({
       keyword: "x-ls",
-      validate: (schema: object, data: object) => {
+      validate: (schema: object, _data: object) => {
         for (const prop in Object.keys(schema)) {
           if (!(prop in ["rdfPredicate", "rdfIRI"])) {
             return false;
