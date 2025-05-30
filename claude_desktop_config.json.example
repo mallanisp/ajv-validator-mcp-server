@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "vera": {
+      "command": "/path/to/bin/node",
+      "args": [
+        "path/to/ajv-validation-mcp/dist/index.js"
+      ]
+    }
+  }
+}
