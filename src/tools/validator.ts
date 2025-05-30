@@ -75,6 +75,8 @@ export class AjvValidatorTool extends Tool<AjvValidatorParams> {
       ? "Data is valid"
       : JSON.stringify(validate.errors, null, 4);
 
+    console.log("Validation result:", text);
+
     return {
       content: [{ type: "text", text }],
     };
