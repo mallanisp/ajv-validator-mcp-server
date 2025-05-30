@@ -1,4 +1,4 @@
-# ajv-validation-mcp
+# ajv-validator-mcp-server
 
 This project provides a minimal [Model Context Protocol (MCP)](https://modelcontextprotocol.io/quickstart/server#node) server for validating JSON data against JSON Schema using [AJV](https://ajv.js.org/).
 

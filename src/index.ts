@@ -1,13 +1,7 @@
-import { Server } from "@modelcontextprotocol/sdk/server/index.js";
-import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import {
-  CallToolRequest,
-  CallToolRequestSchema,
-  CallToolResult,
-} from "@modelcontextprotocol/sdk/types.js";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
 import { AjvValidatorParams, AjvValidatorTool } from "./tools/validator.js";
-import { Tool } from "./tools/tool.js";
 
 export const SERVER_NAME = "ajv-validator";
 export const SERVER_VERSION = "1.0.0";
@@ -16,10 +10,7 @@ function init() {
   const server = new McpServer({
     name: SERVER_NAME,
     version: SERVER_VERSION,
-    capabilities: {
-      resources: {},
-      tools: {},
-    },
+    capabilities: { resources: {}, tools: {} },
   });
 
   const tool = new AjvValidatorTool();
