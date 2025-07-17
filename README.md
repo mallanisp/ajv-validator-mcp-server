@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/mallanisp-ajv-validator-mcp-server-badge.png)](https://mseep.ai/app/mallanisp-ajv-validator-mcp-server)
+
 # ajv-validator-mcp-server
 
 This project provides a minimal [Model Context Protocol (MCP)](https://modelcontextprotocol.io/quickstart/server#node) server for validating JSON data against JSON Schema using [AJV](https://ajv.js.org/).
